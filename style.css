@@ -1,0 +1,147 @@
+:root {
+    --borderWidth: 2.5px;
+    --borderColor: #5f5f5f;
+    --borderRadius: 10px;
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+@media (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* ----------- iPhone 6 ----------- */
+@media (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* ----------- iPhone 6+ ----------- */
+@media (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* ----------- iPad 3 and 4 ----------- */
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    width: 100%;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+div.main {
+    width: 100%;
+}
+
+/* div.itemon & div.itemoff */
+.div-item {
+    display: grid;
+    grid-template-columns: 26.2px auto 1fr;
+    margin-top: 1px;
+    border: solid rgb(152, 146, 146) 2px;
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/* span.itemon & span.itemoff */
+.span-item {
+    padding: 1px 0.3em 0px 0px;
+    font-size: 100%;
+}
+
+span.itemoff {
+    text-decoration: line-through;
+}
+
+/* .itembuttonon & .itembuttonoff */
+.itembutton {
+    font-size: 100%;
+    white-space: normal;
+    overflow: hidden;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+    text-align: left;
+    min-width: 0; /* needed for Firefox */
+}
+
+.itembuttonoff {
+    text-decoration: line-through;
+}
+
+span.itemcheck {
+    font-size: 100%;
+    text-align: center;
+}
+
+.button {
+    /* border: solid var(--field_borderColor) var(--field_borderWidth);
+    border-radius: var(--field_borderRadius); */
+    border: none;
+    border-radius: 5px;
+    height: 32.5px;
+    transition: background-color 500ms ease-in-out 0ms;
+    background-color: #dfdfdf;
+    color: #000000;
+    font-size: 100%;
+}
+
+.button:hover {
+    background-color: #c8b3b3;
+}
+
+div.delete {
+    margin-top: 25px;
+    padding: 10px;
+    border: solid var(--borderColor) var(--borderWidth);
+    border-radius: var(--borderRadius);
+}
+
+div.finish {
+    width: 97%;
+    margin-top: 50px;
+    padding: 10px;
+    border-style: inset;
+    border-color: #f0f0f0;
+    border-width: 3px;
+}
+
+div.add {
+    margin-top: 25px;
+    padding: 10px;
+    border: solid var(--borderColor) var(--borderWidth);
+    border-radius: var(--borderRadius);
+}
+
+/* .addfield & .quanfield */
+.inputfield {
+    font-size: 100%;
+    height: 30px;
+    border: solid grey 2px;
+    border-radius: 7px;
+    padding-left: 5px;
+}
+
+.quantfield {
+    width: 50%;
+}
+
+.addfield {
+    width: 65%;
+}
+
+.addbutton {
+    width: 25%;
+    float: right;
+}
+
+.editbutton {
+    background-color: rgba(0, 0, 255, 0.751);
+    color: white;
+    font-size: 50%;
+    height: 1.7em;
+}
