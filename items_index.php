@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="main" style="background-color: #1B998B;">
+    <div class="main" style="background-color: #22bfad; font-size: 30px;">
       <h3>Artikel-Liste</h3>
 
       <!-- Liste -->

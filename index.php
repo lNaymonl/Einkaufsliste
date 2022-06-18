@@ -12,7 +12,7 @@
       }
     </script>
     <div class="main">
-      <h4><u>Einkaufsliste v0.6.9</u></h4>
+      <h4><u>Einkaufsliste v0.7.0</u></h4>
 
       <!-- Liste -->
       <form action="check.php" method="post" accept-charset="utf-8">
@@ -70,7 +70,7 @@
       $divclass = "itemoff div-item";
       $spanclass = "itemoff span-item";
       $buttonclass = "itembuttonoff itembutton";
-      $checkmark = "&checkmark;&nbsp;&nbsp;";
+      $checkmark = "&checkmark;";
     }
 
     echo "        <div class=\"".$divclass."\">\n";
