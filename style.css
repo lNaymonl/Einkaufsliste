@@ -155,7 +155,6 @@ div.add {
 .addbutton {
   width: 25%;
   float: right;
-  /* font-size: calc(2vw + 10px); */
   font-size: 1.2em;
 }
 
