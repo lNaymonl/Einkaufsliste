@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style_old.css"> -->
   </head>
   <body>
     <script>
@@ -11,7 +12,7 @@
         document.getElementById('itemtext').value = dropboxvalue;
       }
     </script>
-    <div class="main">
+    <div class="index-main main">
       <h4><u>Einkaufsliste v0.7.0</u></h4>
 
       <!-- Liste -->
@@ -60,21 +61,21 @@
 
     if ($checked == "1")
     {
-      $divclass = "itemon div-item";
-      $spanclass = "itemon span-item";
-      $buttonclass = "itembuttonon itembutton";
+      $divclass = "item-on item-wrapper";
+      $spanclass = "item-on item-amount";
+      $buttonclass = "item-on item-button";
       $checkmark = "";
     }
     else
     {
-      $divclass = "itemoff div-item";
-      $spanclass = "itemoff span-item";
-      $buttonclass = "itembuttonoff itembutton";
+      $divclass = "item-off item-wrapper";
+      $spanclass = "item-off item-amount";
+      $buttonclass = "item-off item-button";
       $checkmark = "&checkmark;";
     }
 
     echo "        <div class=\"".$divclass."\">\n";
-    echo "          <span class=\"itemcheck\">".$checkmark."</span>\n";
+    echo "          <span class=\"item-check\">".$checkmark."</span>\n";
     echo "          <span class=\"".$spanclass."\">".$quant."</span>\n";
 //    echo "          <label class=\"".$spanclass."\">".$quant."</label>\n";
     echo "          <input class=\"".$buttonclass."\" type=\"submit\" name=\"check\" value=\"". $item."\" />\n";
@@ -86,9 +87,7 @@
       <!-- delete button -->
       <div class="delete">
         <form action="delete.php" method="post">
-          <div class="itemsubmit">
-            <input class="deletebutton button" type="submit" value="L&ouml;sche Erledigte"/>
-          </div>
+          <input class="delete-button button" type="submit" value="L&ouml;sche Erledigte"/>
         </form>
       </div> <!-- delete -->
 
@@ -96,11 +95,12 @@
       <div class="add">
         <form action="add.php" method="post" accept-charset="utf-8">
           <!-- A free-text input element with a 'list' of alread added items -->
-          <input class="quantfield inputfield" type="text" name="quantity" placeholder="Menge" /> 
-          </br> </br>
-          <input class="addfield inputfield" type="text" name="name" id="itemtext" list="items" placeholder="Artikel" />
-          <input class="addbutton button" type="submit" value="Hinzu" />
-          </br> </br>
+          <div class="add-item">
+            <input class="quant-field input-field" type="text" name="quantity" placeholder="Menge" /> 
+            </br> </br>
+            <input class="add-field input-field" type="text" name="name" id="itemtext" list="items" placeholder="Artikel" />
+            <input class="add-button button" type="submit" value="Hinzu" />
+          </div>
           <!-- This is not needed anymore as item lists are now supported for iPhone
           <select class="addcombo" id="itemdropbox" onchange="copyValue()">
             <option></option>
@@ -139,15 +139,9 @@
       <!-- Button for editing added-items list -->
       <div class="edit">
         <form action="items_index.php" method="post">
-          <div class="itemsubmit">
-            <input class="editbutton button" type="submit" value="Artikelliste bearbeiten"/>
-          </div>
+          <input class="edit-button button" type="submit" value="Artikelliste bearbeiten"/>
         </form>
       </div> <!-- edit -->
-
-      <!-- vertical space -->
-      <div style="height:100px;">
-      </div>
     </div> <!-- main -->
   </body>
 </html>

@@ -2,10 +2,11 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style_old.css"> -->
   </head>
   <body>
-    <div class="main" style="background-color: #22bfad; font-size: 30px;">
-      <h3>Artikel-Liste</h3>
+    <div class="items-main main">
+      <h4>Artikel-Liste</h4>
 
       <!-- Liste -->
       <form action="items_check.php" method="post" accept-charset="utf-8">
@@ -30,16 +31,16 @@
 
     if ($checked == "1")
     {
-      $buttonclass = "itembuttonon itembutton";
+      $buttonclass = "item-on item-button";
       $checkmark = "";
     }
     else
     {
-      $buttonclass = "itembuttonoff itembutton";
-      $checkmark = "&checkmark;";
+      $buttonclass = "item-off item-button";
+      $checkmark = "&nbsp&nbsp&nbsp";
     }
 
-    echo "        <div class=\"item\">\n";
+    echo "        <div class=\"item-wrapper\">\n";
     echo "          ".$checkmark;
     echo " <input class=\"".$buttonclass."\" type=\"submit\" name=\"check\" value=\"". $item."\" />\n";
     echo "        </div>\n";
@@ -50,26 +51,22 @@
       <!-- delete button -->
       <div class="delete">
         <form action="items_delete.php" method="post" accept-charset="utf-8">
-          <div class="itemsubmit">
-            <input class="deletebutton button" type="submit" value="L&ouml;sche markierte"/>
-          </div>
+          <input class="delete-button button" type="submit" value="L&ouml;sche markierte"/>
         </form>
       </div> <!-- delete -->
 
       <!-- item edits for addition -->
       <div class="add">
         <form action="items_add.php" method="post" accept-charset="utf-8">
-          <input class="addfield inputfield" type="text" name="name" />
-          <input class="addbutton button" type="submit" value="Hinzu"/>
+          <input class="add-field input-field" type="text" name="name" />
+          <input class="add-button button" type="submit" value="Hinzu"/>
         </form>
       </div> <!-- add -->
 
       <!-- Finish editing added-items -->
       <div class="finish">
         <form action="index.php" method="post">
-          <div class="itemsubmit">
-            <input class="finishbutton button" type="submit" value="Artikelliste beenden"/>
-          </div>
+          <input class="finish-button button" type="submit" value="Artikelliste beenden"/>
         </form>
       </div> <!-- edit -->
     </div> <!-- main -->
