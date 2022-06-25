@@ -13,7 +13,7 @@
       }
     </script>
     <div class="index-main main">
-      <h4><u>Einkaufsliste v0.7.0</u></h4>
+      <h4>Einkaufsliste v0.7.0</h4>
 
       <!-- Liste -->
       <form action="check.php" method="post" accept-charset="utf-8">

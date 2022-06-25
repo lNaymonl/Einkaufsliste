@@ -7,10 +7,11 @@
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
   width: 100vw;
   height: 100vh;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
 
 input {
@@ -38,7 +39,9 @@ input {
 
 h4 {
   margin-top: 0;
-  font-size: 20px;
+  font-size: 25px;
+
+  text-decoration: underline;
 }
 
 .item-wrapper {
@@ -76,7 +79,7 @@ h4 {
 .item-amount {
   text-align: right;
   min-width: 50px;
-  line-height: 100%;
+
   align-items: center;
   display: flex;
   justify-content: right;
@@ -121,12 +124,12 @@ h4 {
   border: none;
   border-radius: 5px;
 
-  transition: 300ms ease-in-out 0ms;
+  transition: background-color 300ms ease-in-out 0ms;
 
   cursor: pointer;
 }
 
-.button:not(.editbutton):hover {
+.button:not(.edit-button):hover {
   background-color: #c8b3b3;
 }
 
@@ -190,7 +193,7 @@ h4 {
 }
 
 .edit-button:hover {
-  background-color: rgba(0, 0, 255, 0.737);
+  background-color: rgba(0, 0, 255, 0.593);
 }
 
 .finish {
